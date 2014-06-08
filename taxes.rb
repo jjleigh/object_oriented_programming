@@ -30,24 +30,26 @@ class Input
 				puts "Invalid code, please try again!"
 				add_item
 			end
-		basic_tax_exemption_check
 	end 
 
 #this method collects exempted products
 	def exempted(item_name, price_of_item)
 		@output.no_tax(item_name, price_of_item)
+		add_item
 	end 
 
 	# this method collects the price of an item and returns its import tax
 	def import_tax(item_name, price_of_item)
 		@output.import_tax_calc(item_name, price_of_item)
+		add_item
 	end 
 
 	# #this method collects the price of an item returns its basic tax
 	def basic_tax(item_name, price_of_item)
 		@output.basic_tax_calc(item_name, price_of_item)
+		add_item
 	end
 end 
 
-banana = Input.new#("product_name", 10, 100)
+banana = Input.new
 banana.add_item
