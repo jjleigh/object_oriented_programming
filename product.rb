@@ -1,12 +1,13 @@
+
+# this class creates a new product in the shopping cart
 class Product
-	def initialize(product_name, price)
-		@product_name = product_name
-		@price = price
+	attr_accessor :item_name, :price_of_item
+
+	def initialize
+		@basket = {}
 	end
 
-	def basket(product_name, price)
-		basket = {}
-		basket[product_name] = price
-	
+	def basket(item_name, final_price)
+		@basket[item_name] = final_price
 	end 
 end 
